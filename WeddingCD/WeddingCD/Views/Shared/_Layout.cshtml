@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@WeddingCD.Resources.View.CommonResources.Title</title>
+    @Styles.Render("~/Content/css")
+
+    <!-- Fonts -->
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Oswald:400,300,700'>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,700italic,600italic,800italic'>
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- END: fullscreenloading -->
+    <div id="fullscreenloading">
+        <div id="fullscreenloading-content">
+            <div id="boxedResult">
+                <div id="sendResult">
+                    <div class="uil-rolling-css"><div><div></div><div></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: fullscreenloading -->
+    <!-- START SECTION: home -->
+    <section id="home" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="title"><span></span>@WeddingCD.Resources.View.CommonResources.MessageAccueil<span></span></h3>
+                    <ul class="names">
+                        <li>@WeddingCD.Resources.View.CommonResources.PrenomFemme</li>
+                        <li class="circle">&amp;</li>
+                        <li>@WeddingCD.Resources.View.CommonResources.PrenomHomme</li>
+                    </ul>
+                    <div class="date">Aout <span>16</span> 2018</div>
+                    <div class="hour">14h00</div>
+                    <div class="place">
+                        <h3>@WeddingCD.Resources.View.CommonResources.NomQuinta</h3>
+                        <p>@WeddingCD.Resources.View.CommonResources.AdresseQuinta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION: home -->
+    <!-- START: main-sticky-nav -->
+    <header>
+        <div class="sticky-wrapper" id="nav-sticky-wrapper">
+            <nav id="nav" class="navbar navbar-default">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <ul class="names">
+                            <li>@WeddingCD.Resources.View.CommonResources.PrenomFemme</li>
+                            <li class="circle">&amp;</li>
+                            <li>@WeddingCD.Resources.View.CommonResources.PrenomHomme</li>
+                        </ul>
+                    </a>
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="nav_menu">
+                        <ul id="nav_list" class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#home">@WeddingCD.Resources.View.CommonResources.Accueil</a></li>
+                            <li class=""><a href="#couple">@WeddingCD.Resources.View.CommonResources.Couple</a></li>
+                            <li class=""><a href="#our-story">@WeddingCD.Resources.View.CommonResources.NotreHistoire</a></li>
+                            <li class=""><a href="#gallery">@WeddingCD.Resources.View.CommonResources.Gallerie</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container -->
+            </nav>
+        </div>
+    </header>
+    <!-- END: main-sticky-nav -->
+    <!-- START SECTION: couple -->
+    <section id="couple" class="bg-gray-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12 text-center">
+                    <div class="profile">
+                        <h2>@WeddingCD.Resources.View.CommonResources.PrenomFemme <span>@WeddingCD.Resources.View.CommonResources.NomFemme</span></h2>
+                        <img src="~/Content/Images/pic-groom.jpg" class="img-responsive img-circle" alt="Groom" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu faucibus. Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis auctor in est ac dignissim.</p>
+                        <div class="social-icons">
+                            <a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <!-- <a href="#" target="_blank" class="pinterest"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#" target="_blank" class="google"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" target="_blank" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#" target="_blank" class="vimeo"><i class="fa fa-vimeo"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12 text-center">
+                    <div class="profile">
+                        <h2>@WeddingCD.Resources.View.CommonResources.PrenomHomme <span>@WeddingCD.Resources.View.CommonResources.NomHomme</span></h2>
+                        <img src="~/Content/Images/pic-bride.jpg" class="img-responsive img-circle" alt="Groom" />
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu faucibus. Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis auctor in est ac dignissim.</p>
+                        <div class="social-icons">
+                            <a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <!-- <a href="#" target="_blank" class="pinterest"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#" target="_blank" class="google"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" target="_blank" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#" target="_blank" class="vimeo"><i class="fa fa-vimeo"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION: couple -->
+    @*<!-- START SECTION: frase -->
+        <section id="frase" class="img-bg-2" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+                        <h2><i class="fa fa-quote-left" aria-hidden="true"></i> Celebrate love with all your heart and share it with all your loved ones. Now you can start to do it with this HTML template... is perfect for you!. <i class="fa fa-quote-right" aria-hidden="true"></i></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION: frase -->*@
+
+    <!-- START SECTION: our-story -->
+    <section id="our-story">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+                    <div class="title-block">
+                        <h1>Our <span><em>Story</em></span></h1>
+                        <div class="divider"></div>
+                        <p><em>Dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu faucibus. Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis auctor in est ac dignissim.</em></p>
+                    </div>
+                </div>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h2 class="timeline-title">May <span>04</span> 2015</h2>
+                        </div>
+                        <div class="timeline-body text-center">
+                            <img src="img/story/story-img-01.jpg" class="img-responsive" alt="Our Story" />
+                            <h2 class="timeline-title">Our first meeting</h2>
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h2 class="timeline-title">Dec <span>28</span> 2015</h2>
+                        </div>
+                        <div class="timeline-body text-center">
+                            <img src="img/story/story-img-02.jpg" class="img-responsive" alt="Our Story" />
+                            <h2 class="timeline-title">Great witer days</h2>
+                            <p>Mussum ipsum cacilds, vidis litro abertis.  Mauris porttitor non sem eu faucibus. Aenean pellentesque dui tincidunt mauris porttitor non sem eu faucibus. Aenean pellentesque dui tincidunt,Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis .</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h2 class="timeline-title">Feb <span>16</span> 2016</h2>
+                        </div>
+                        <div class="timeline-body text-center">
+                            <img src="img/story/story-img-03.jpg" class="img-responsive" alt="Our Story" />
+                            <h2 class="timeline-title">Trip to caribbean</h2>
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h2 class="timeline-title">Oct <span>18</span> 2017</h2>
+                        </div>
+                        <div class="timeline-body text-center">
+                            <img src="img/story/story-img-04.jpg" class="img-responsive" alt="Our Story" />
+                            <h2 class="timeline-title">Autumn love</h2>
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-end">
+                        <div class="timeline-badge"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+                    <div class="final-frase">Now we are ready for the <span>next step...</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION: our-story -->
+
+
+    @RenderBody()
+
+    @*<div class="container body-content">
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
+
+
+
+    @*<!-- START SECTION: counter -->
+        <section id="counter" class="img-bg-3" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+
+                        <h2>Counting the minutes for the big day!</h2>
+
+                        <!-- Countdown -->
+                        <div class="countdown" data-date="2018-08-23 00:00:00"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION: counter -->*@
+
+    <!-- START: footer -->
+    <section id="footer" class="img-bg-5" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
+                    <h1>@WeddingCD.Resources.View.CommonResources.Merci</h1>
+                    <ul class="names">
+                        <li>@WeddingCD.Resources.View.CommonResources.PrenomFemme</li>
+                        <li class="circle">&amp;</li>
+                        <li>@WeddingCD.Resources.View.CommonResources.PrenomHomme</li>
+                    </ul>
+                    <div class="copyright">All Rights Reserved © 2018 | Design: <a href="http://marttinfisher.com" target="_blank">Marttin Fisher</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END: footer -->
+    <!-- Color Switch -->
+    <style type="text/css">
+        .color-switch {
+            position: fixed;
+            top: 40%;
+            left: -121px;
+            background: #fff;
+            padding: 20px;
+            transition: all .4s;
+            z-index: 9999999;
+            box-shadow: 0px 0px 10px #eae8e8;
+        }
+
+        .switch-active {
+            left: 0;
+        }
+
+        .color-switch .icon {
+            position: absolute;
+            top: 0;
+            right: -40px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            color: #121212;
+            background: #fff;
+            box-shadow: 0px 0px 10px #eae8e8;
+            cursor: pointer;
+        }
+
+            .color-switch .icon i {
+                -webkit-animation: fa-spin 2s infinite linear;
+                animation: fa-spin 2s infinite linear;
+            }
+
+        .color-switch button::after {
+            content: "\f00c";
+            font-family: "FontAwesome";
+            position: absolute;
+            top: 0;
+            left: 5px;
+            font-size: 10px;
+            color: #fff;
+            opacity: 0;
+        }
+
+        .color-switch button {
+            width: 20px;
+            margin: 2px;
+            height: 20px;
+            line-height: 20px;
+            border: 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .color-switch .blue {
+            background: #7E6DF6;
+        }
+
+        .color-switch .active::after {
+            opacity: 1;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            "use strict";
+
+            // color switch
+            $(".color-switch").on("click", "button", function () {
+
+                $(this).addClass("active").siblings().removeClass("active");
+                $("link[href*='color']").attr("href", "css/colors/" + $(this).val() + ".css");
+                var thisColor = $(this).attr("data-color");
+                $(".countdown").TimeCircles({
+                    time: {
+                        Days: { color: thisColor },
+                        Hours: { color: thisColor },
+                        Minutes: { color: thisColor },
+                        Seconds: { color: thisColor }
+                    }
+                });
+            });
+
+            $(".color-switch").on("click", ".icon", function () {
+                $(".color-switch").toggleClass("switch-active");
+            });
+        });
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/LibrariesJavascript")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
