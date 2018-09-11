@@ -66,5 +66,23 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeddingCD.Business\WeddingCD.Business.csproj">
+      <Project>{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}</Project>
+      <Name>WeddingCD.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeddingCD.Configuration\WeddingCD.Configuration.csproj">
+      <Project>{2432BC71-0C66-446F-9BD5-D7CA990624D5}</Project>
+      <Name>WeddingCD.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeddingCD.DAL.Context\WeddingCD.DAL.Context.csproj">
+      <Project>{B6CCD5B1-985C-48A3-AD50-8B4A8E6122BD}</Project>
+      <Name>WeddingCD.DAL.Context</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeddingCD.Interface\WeddingCD.Interface.csproj">
+      <Project>{72B82BA7-8135-424F-BC7C-0AE995CEE77F}</Project>
+      <Name>WeddingCD.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

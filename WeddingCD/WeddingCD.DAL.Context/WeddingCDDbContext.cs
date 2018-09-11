@@ -7,9 +7,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using WeddingCD.Configuration;
 using WeddingCD.DAL.Context;
 
-namespace Thermibox.DAL.Context
+namespace WeddingCD.DAL.Context
 {
     /// <summary>
     /// Class that represents the database context.
@@ -28,14 +29,14 @@ namespace Thermibox.DAL.Context
             var ensureWeLoadTheProvider = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
-        ///// <summary>
-        ///// Initializes a new instance of the <see cref="WeddingCDDbContext"/> class.
-        ///// </summary>
-        ///// <param name="configuration">The configuration instance.</param>
-        //public WeddingCDDbContext(IConfiguration configuration)
-        //    : this(configuration.GetString(ConfigurationKey.DatabaseConnectionString))
-        //{
-        //}
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WeddingCDDbContext"/> class.
+        /// </summary>
+        /// <param name="configuration">The configuration instance.</param>
+        public WeddingCDDbContext(IConfiguration configuration)
+            : this(configuration.GetString(ConfigurationKey.DatabaseConnectionString))
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WeddingCDDbContext" /> class.

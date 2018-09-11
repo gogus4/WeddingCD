@@ -5,11 +5,13 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using WeddingCD.DAL.Entities;
+using WeddingCD.DAL.Mappings;
 
 namespace WeddingCD.DAL.Context
 {
     /// <summary>
-    /// The Thermibox model class.
+    /// The WeddingCD model class.
     /// </summary>
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1600:ElementsMustBeDocumented", Justification = "No description provided for DbSets.")]
     [DbConfigurationType(typeof(DataContextConfiguration))]
@@ -45,7 +47,7 @@ namespace WeddingCD.DAL.Context
 
         #region DbSets
 
-        //public DbSet<WSProfil> WSProfils { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         #endregion
 
@@ -67,7 +69,7 @@ namespace WeddingCD.DAL.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Adds every mapping configuration here
-            //modelBuilder.Configurations.Add(new AccessoireMap());
+            modelBuilder.Configurations.Add(new CategoryMap());
         }
     }
 }

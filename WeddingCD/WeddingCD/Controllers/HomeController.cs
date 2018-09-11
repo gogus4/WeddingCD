@@ -1,30 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using WeddingCD.Business.Interface;
+using WeddingCD.Models.Home;
 
 namespace WeddingCD.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        /// <summary>
+        /// The home management instance
+        /// </summary>
+        private readonly IGalleryManagement galleryManagement;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="HomeController" /> class.
+        /// </summary>
+        /// <param name="homeManagement">The home management.</param>
+        public HomeController(IGalleryManagement galleryManagement)
         {
-            return View();
+            this.galleryManagement = galleryManagement;
         }
 
-        public ActionResult About()
+        public async Task<ActionResult> Index()
         {
-            ViewBag.Message = "Your application description page.";
+            var model = new HomeViewModel();
 
-            return View();
-        }
+            var categories = await this.galleryManagement.GetCategoriesAsync();
+            model.Categories = categories;
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(model);
         }
     }
 }

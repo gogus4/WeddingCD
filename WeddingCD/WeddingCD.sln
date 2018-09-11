@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD", "WeddingCD\WeddingCD.csproj", "{75486F1D-8ECF-4A83-A930-DD85E6A1EB6E}"
 EndProject
@@ -28,6 +28,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.Common", "WeddingCD.Common\WeddingCD.Common.csproj", "{025B7C42-C42F-4078-9A23-079749975634}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.IoC", "WeddingCD.IoC\WeddingCD.IoC.csproj", "{3D0DD411-15ED-45D5-9D70-E3E2C189A572}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Business", "2.Business", "{08AA3242-1018-43D9-B886-A84993F02F56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.Business", "WeddingCD.Business\WeddingCD.Business.csproj", "{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.Interface", "WeddingCD.Interface\WeddingCD.Interface.csproj", "{72B82BA7-8135-424F-BC7C-0AE995CEE77F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.Configuration", "WeddingCD.Configuration\WeddingCD.Configuration.csproj", "{2432BC71-0C66-446F-9BD5-D7CA990624D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +71,18 @@ Global
 		{3D0DD411-15ED-45D5-9D70-E3E2C189A572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0DD411-15ED-45D5-9D70-E3E2C189A572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0DD411-15ED-45D5-9D70-E3E2C189A572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72B82BA7-8135-424F-BC7C-0AE995CEE77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B82BA7-8135-424F-BC7C-0AE995CEE77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B82BA7-8135-424F-BC7C-0AE995CEE77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B82BA7-8135-424F-BC7C-0AE995CEE77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2432BC71-0C66-446F-9BD5-D7CA990624D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2432BC71-0C66-446F-9BD5-D7CA990624D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2432BC71-0C66-446F-9BD5-D7CA990624D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2432BC71-0C66-446F-9BD5-D7CA990624D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +95,9 @@ Global
 		{45BF7C7A-DD8A-4670-9B48-EBA73BF57A8E} = {2426E2DD-DADD-46F6-B170-C127ADCC5B58}
 		{025B7C42-C42F-4078-9A23-079749975634} = {346DB3CA-CC50-453E-A9BB-EBB86FF263E2}
 		{3D0DD411-15ED-45D5-9D70-E3E2C189A572} = {9DF5CAC1-751B-4A12-A6AA-E42E64FAC4A6}
+		{96BA118B-6F60-43D9-8056-A7EFE01AC7D7} = {08AA3242-1018-43D9-B886-A84993F02F56}
+		{72B82BA7-8135-424F-BC7C-0AE995CEE77F} = {08AA3242-1018-43D9-B886-A84993F02F56}
+		{2432BC71-0C66-446F-9BD5-D7CA990624D5} = {346DB3CA-CC50-453E-A9BB-EBB86FF263E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39C57351-D67A-42CA-B721-B7EDE05CD2D7}

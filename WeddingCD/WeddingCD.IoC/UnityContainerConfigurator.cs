@@ -1,4 +1,8 @@
 ﻿using Microsoft.Practices.Unity;
+using WeddingCD.Business;
+using WeddingCD.Business.Interface;
+using WeddingCD.Configuration;
+using WeddingCD.DAL.Context;
 
 namespace WeddingCD.IoC
 {
@@ -15,9 +19,10 @@ namespace WeddingCD.IoC
         public static void Configure(IUnityContainer container, LifetimeManager dbContextLifetimeManager)
         {
             //// Gets the DB context configuration
-            //var dbContextParam = container.Resolve<IConfiguration>().GetString(ConfigurationKey.DatabaseConnectionString);
-            //container.RegisterType<ThermiboxDbContext, ThermiboxDbContext>(dbContextLifetimeManager);
+            var dbContextParam = container.Resolve<IConfiguration>().GetString(ConfigurationKey.DatabaseConnectionString);
+            container.RegisterType<WeddingCDDbContext, WeddingCDDbContext>(dbContextLifetimeManager);
 
+            container.RegisterType<IGalleryManagement, GalleryManagement>();
             //// Logging
             //container.RegisterType<ILogFactory, LogFactory>();
             //container.RegisterType<ILogReader, AzureDbLogReader>();
@@ -51,7 +56,7 @@ namespace WeddingCD.IoC
         /// <param name="container">The container.</param>
         public static void ConfigureAzure(IUnityContainer container)
         {
-            //container.RegisterInstance<IConfiguration>(new AzureConfiguration());
+            container.RegisterInstance<IConfiguration>(new WeddingCD.Configuration.Configuration());
             //container.RegisterType<IQueue, ServiceBusQueue>();
             //container.RegisterType<IEmailSender, QueueEmailSender>();
             //container.RegisterType<IPersistentStorage, Thermibox.PersistentStorage.Azure.PersistentStorage>();

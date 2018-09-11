@@ -166,6 +166,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Home\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -245,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -261,6 +261,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WeddingCD.DAL.Entities\WeddingCD.DAL.Entities.csproj">
+      <Project>{871719b7-9eac-49e2-9db4-fee1898b1f8f}</Project>
+      <Name>WeddingCD.DAL.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeddingCD.Interface\WeddingCD.Interface.csproj">
+      <Project>{72B82BA7-8135-424F-BC7C-0AE995CEE77F}</Project>
+      <Name>WeddingCD.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeddingCD.IoC\WeddingCD.IoC.csproj">
       <Project>{3d0dd411-15ed-45d5-9d70-e3e2c189a572}</Project>
       <Name>WeddingCD.IoC</Name>

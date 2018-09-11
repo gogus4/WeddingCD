@@ -126,8 +126,8 @@
   <data name="Couple" xml:space="preserve">
     <value>Couple</value>
   </data>
-  <data name="Gallerie" xml:space="preserve">
-    <value>Gallerie</value>
+  <data name="Galerie" xml:space="preserve">
+    <value>Galerie</value>
   </data>
   <data name="Merci" xml:space="preserve">
     <value>Merci à tous !</value>
@@ -147,6 +147,9 @@
   <data name="NotreHistoire" xml:space="preserve">
     <value>Notre histoire</value>
   </data>
+  <data name="Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
   <data name="PrenomFemme" xml:space="preserve">
     <value>Cécile</value>
   </data>
@@ -155,5 +158,8 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>Mariage Cécile &amp; Diégo</value>
+  </data>
+  <data name="Tous" xml:space="preserve">
+    <value>Tous</value>
   </data>
 </root>

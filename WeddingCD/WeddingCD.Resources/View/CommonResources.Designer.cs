@@ -19,7 +19,7 @@ namespace WeddingCD.Resources.View {
     // à l'aide d'un outil, tel que ResGen ou Visual Studio.
     // Pour ajouter ou supprimer un membre, modifiez votre fichier .ResX, puis réexécutez ResGen
     // avec l'option /str ou régénérez votre projet VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class CommonResources {
@@ -88,11 +88,11 @@ namespace WeddingCD.Resources.View {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Gallerie.
+        ///   Recherche une chaîne localisée semblable à Galerie.
         /// </summary>
-        public static string Gallerie {
+        public static string Galerie {
             get {
-                return ResourceManager.GetString("Gallerie", resourceCulture);
+                return ResourceManager.GetString("Galerie", resourceCulture);
             }
         }
         
@@ -151,6 +151,15 @@ namespace WeddingCD.Resources.View {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Photo.
+        /// </summary>
+        public static string Photo {
+            get {
+                return ResourceManager.GetString("Photo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Cécile.
         /// </summary>
         public static string PrenomFemme {
@@ -174,6 +183,15 @@ namespace WeddingCD.Resources.View {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Tous.
+        /// </summary>
+        public static string Tous {
+            get {
+                return ResourceManager.GetString("Tous", resourceCulture);
             }
         }
     }

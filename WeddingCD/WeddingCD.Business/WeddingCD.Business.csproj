@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B6CCD5B1-985C-48A3-AD50-8B4A8E6122BD}</ProjectGuid>
+    <ProjectGuid>{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WeddingCD.DAL.Context</RootNamespace>
-    <AssemblyName>WeddingCD.DAL.Context</AssemblyName>
+    <RootNamespace>WeddingCD.Business</RootNamespace>
+    <AssemblyName>WeddingCD.Business</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,14 +33,15 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,36 +50,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataContextConfiguration.cs" />
-    <Compile Include="Infrastructure\DatabaseTransaction.cs" />
-    <Compile Include="Infrastructure\DatabaseTransactionFactory.cs" />
+    <Compile Include="GalleryManagement.cs" />
+    <Compile Include="BaseManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WeddingCDDbContext.cs" />
-    <Compile Include="WeddingCDModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WeddingCD.Common\WeddingCD.Common.csproj">
-      <Project>{025b7c42-c42f-4078-9a23-079749975634}</Project>
-      <Name>WeddingCD.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WeddingCD.Configuration\WeddingCD.Configuration.csproj">
       <Project>{2432BC71-0C66-446F-9BD5-D7CA990624D5}</Project>
       <Name>WeddingCD.Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WeddingCD.DAL.Context\WeddingCD.DAL.Context.csproj">
+      <Project>{b6ccd5b1-985c-48a3-ad50-8b4a8e6122bd}</Project>
+      <Name>WeddingCD.DAL.Context</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeddingCD.DAL.Entities\WeddingCD.DAL.Entities.csproj">
-      <Project>{871719B7-9EAC-49E2-9DB4-FEE1898B1F8F}</Project>
+      <Project>{871719b7-9eac-49e2-9db4-fee1898b1f8f}</Project>
       <Name>WeddingCD.DAL.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WeddingCD.DAL.Mappings\WeddingCD.DAL.Mappings.csproj">
-      <Project>{45BF7C7A-DD8A-4670-9B48-EBA73BF57A8E}</Project>
-      <Name>WeddingCD.DAL.Mappings</Name>
+    <ProjectReference Include="..\WeddingCD.Interface\WeddingCD.Interface.csproj">
+      <Project>{72b82ba7-8135-424f-bc7c-0ae995cee77f}</Project>
+      <Name>WeddingCD.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
