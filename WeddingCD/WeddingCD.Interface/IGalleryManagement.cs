@@ -18,5 +18,11 @@ namespace WeddingCD.Business.Interface
         /// </summary>
         /// <returns>The Task to be awaited.</returns>
         Task<IList<Category>> GetCategoriesAsync();
+
+        /// <summary>
+        /// Get pictures
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        Task<IList<Picture>> GetPicturesAsync();
     }
 }

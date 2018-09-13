@@ -48,6 +48,7 @@ namespace WeddingCD.DAL.Context
         #region DbSets
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Picture> Pictures { get; set; }
 
         #endregion
 
@@ -70,6 +71,7 @@ namespace WeddingCD.DAL.Context
         {
             // Adds every mapping configuration here
             modelBuilder.Configurations.Add(new CategoryMap());
+            modelBuilder.Configurations.Add(new PictureMap());
         }
     }
 }

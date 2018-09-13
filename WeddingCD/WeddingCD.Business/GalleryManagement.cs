@@ -45,6 +45,24 @@ namespace WeddingCD.Business
             }
         }
 
+        /// <summary>
+        /// Get pictures
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        public async Task<IList<Picture>> GetPicturesAsync()
+        {
+            /*try
+            {
+                return await this.DbContext.Pictures.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }*/
+
+            return null;
+        }
+
         #endregion
     }
 }

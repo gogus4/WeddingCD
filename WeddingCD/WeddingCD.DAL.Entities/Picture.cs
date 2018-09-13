@@ -3,17 +3,19 @@ using System.Collections.Generic;
 
 namespace WeddingCD.DAL.Entities
 {
-    public partial class Category
+    public partial class Picture
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public Picture()
         {
-            this.Pictures = new List<Picture>();
         }
 
+        public long IdPicture { get; set; }
         public long IdCategory { get; set; }
-        public string Name { get; set; }
+        public string Path { get; set; }
+        public string AddBy { get; set; }
+        //public DateTime Date { get; set; }
 
-        public virtual ICollection<Picture> Pictures { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
