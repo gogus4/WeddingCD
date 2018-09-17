@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using WeddingCD.Business.Interface;
+using WeddingCD.DAL.Entities;
 using WeddingCD.Models.Home;
 
 namespace WeddingCD.Controllers
@@ -29,10 +31,52 @@ namespace WeddingCD.Controllers
         {
             var model = new HomeViewModel();
 
-            var categories = await this.galleryManagement.GetCategoriesAsync();
-            model.Categories = categories;
+            model.Categories = await this.galleryManagement.GetCategoriesAsync();
+
+            foreach (var category in model.Categories)
+            {
+                model.CategorieListItem.Add(new SelectListItem()
+                {
+                    Text = category.Name,
+                    Value = category.Name
+                });
+            }
+
+            model.Pictures = await this.galleryManagement.GetPicturesAsync();
 
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> UploadPictureAsync(string Categorie, List<HttpPostedFileBase> files)
+        {
+            try
+            {
+                var categoryDb = await this.galleryManagement.GetCategoryByNameAsync(Categorie);
+
+                foreach (var file in files)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    var path = Path.Combine(Server.MapPath(@"~\Content\Galerie\"), fileName);
+                    file.SaveAs(path);
+
+                    // Insert the picture
+                    await this.galleryManagement.InsertPictureAsync(new Picture()
+                    {
+                        AddBy = "Diego",
+                        Category = categoryDb,
+                        Path = fileName
+                    });
+                }
+
+                return this.Json(new { Success = true }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                // Info  
+                Console.Write(ex);
+                return this.Json(new { Success = false }, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

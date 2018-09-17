@@ -20,9 +20,21 @@ namespace WeddingCD.Business.Interface
         Task<IList<Category>> GetCategoriesAsync();
 
         /// <summary>
+        /// Get category by name
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        Task<Category> GetCategoryByNameAsync(string name);
+
+        /// <summary>
         /// Get pictures
         /// </summary>
         /// <returns>The Task to be awaited.</returns>
         Task<IList<Picture>> GetPicturesAsync();
+
+        /// <summary>
+        /// Insert picture
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        Task<IList<Picture>> InsertPictureAsync(Picture pictureToInsert);
     }
 }

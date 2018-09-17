@@ -129,6 +129,9 @@
   <data name="Galerie" xml:space="preserve">
     <value>Galerie</value>
   </data>
+  <data name="Histoire" xml:space="preserve">
+    <value>Histoire</value>
+  </data>
   <data name="Merci" xml:space="preserve">
     <value>Merci à tous !</value>
   </data>
@@ -144,6 +147,9 @@
   <data name="NomQuinta" xml:space="preserve">
     <value>Quinta Redolho de Cima</value>
   </data>
+  <data name="Notre" xml:space="preserve">
+    <value>Notre</value>
+  </data>
   <data name="NotreHistoire" xml:space="preserve">
     <value>Notre histoire</value>
   </data>
@@ -156,10 +162,22 @@
   <data name="PrenomHomme" xml:space="preserve">
     <value>Diégo</value>
   </data>
+  <data name="Propriete_Category" xml:space="preserve">
+    <value>Catégorie</value>
+  </data>
+  <data name="Propriete_PictureToUpload" xml:space="preserve">
+    <value>Photo</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Mariage Cécile &amp; Diégo</value>
   </data>
   <data name="Tous" xml:space="preserve">
     <value>Tous</value>
+  </data>
+  <data name="Validation_Category_Required" xml:space="preserve">
+    <value>Le champ "Catégorie" est obligatoire.</value>
+  </data>
+  <data name="Validation_PictureToUpload_Required" xml:space="preserve">
+    <value>Le champ "Photo" est obligatoire.</value>
   </data>
 </root>

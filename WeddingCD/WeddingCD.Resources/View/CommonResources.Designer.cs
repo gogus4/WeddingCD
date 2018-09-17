@@ -97,6 +97,15 @@ namespace WeddingCD.Resources.View {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Histoire.
+        /// </summary>
+        public static string Histoire {
+            get {
+                return ResourceManager.GetString("Histoire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Merci à tous !.
         /// </summary>
         public static string Merci {
@@ -142,6 +151,15 @@ namespace WeddingCD.Resources.View {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Notre.
+        /// </summary>
+        public static string Notre {
+            get {
+                return ResourceManager.GetString("Notre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Notre histoire.
         /// </summary>
         public static string NotreHistoire {
@@ -178,6 +196,24 @@ namespace WeddingCD.Resources.View {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Catégorie.
+        /// </summary>
+        public static string Propriete_Category {
+            get {
+                return ResourceManager.GetString("Propriete_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Photo.
+        /// </summary>
+        public static string Propriete_PictureToUpload {
+            get {
+                return ResourceManager.GetString("Propriete_PictureToUpload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Mariage Cécile &amp; Diégo.
         /// </summary>
         public static string Title {
@@ -192,6 +228,24 @@ namespace WeddingCD.Resources.View {
         public static string Tous {
             get {
                 return ResourceManager.GetString("Tous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le champ &quot;Catégorie&quot; est obligatoire..
+        /// </summary>
+        public static string Validation_Category_Required {
+            get {
+                return ResourceManager.GetString("Validation_Category_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le champ &quot;Photo&quot; est obligatoire..
+        /// </summary>
+        public static string Validation_PictureToUpload_Required {
+            get {
+                return ResourceManager.GetString("Validation_PictureToUpload_Required", resourceCulture);
             }
         }
     }

@@ -183,6 +183,7 @@
     <Content Include="Content\Images\bg-1_old.jpg" />
     <Content Include="Content\Images\pic-bride.jpg" />
     <Content Include="Content\Images\pic-groom.jpg" />
+    <Content Include="Content\Images\story-img-01.jpg" />
     <Content Include="Content\libs\loading\rolling.css" />
     <Content Include="Content\libs\magnific-popup\magnific-popup.css" />
     <Content Include="Content\libs\owl-carousel\owl.carousel.css" />
@@ -246,6 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Galerie\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

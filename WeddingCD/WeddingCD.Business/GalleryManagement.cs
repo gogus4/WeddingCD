@@ -46,19 +46,59 @@ namespace WeddingCD.Business
         }
 
         /// <summary>
+        /// Get category by name
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        public async Task<Category> GetCategoryByNameAsync(string name)
+        {
+            try
+            {
+                return await this.DbContext.Categories.FirstOrDefaultAsync(x => x.Name == name);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Get pictures
         /// </summary>
         /// <returns>The Task to be awaited.</returns>
         public async Task<IList<Picture>> GetPicturesAsync()
         {
-            /*try
+            try
             {
                 return await this.DbContext.Pictures.ToListAsync();
             }
             catch (Exception ex)
             {
                 throw;
-            }*/
+            }
+        }
+
+        /// <summary>
+        /// Insert picture
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        public async Task<IList<Picture>> InsertPictureAsync(Picture pictureToInsert)
+        {
+            try
+            {
+                this.DbContext.Pictures.Add(new Picture()
+                {
+                    AddBy = pictureToInsert.AddBy,
+                    Category = pictureToInsert.Category,
+                    Path = pictureToInsert.Path,
+                    Date = DateTime.UtcNow
+                });
+
+                await this.DbContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
 
             return null;
         }

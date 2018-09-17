@@ -4,23 +4,33 @@
     ViewBag.Title = "Home Page";
 }
 
-<!-- Modal -->
-<div class="modal fade" style="margin-top:200px;" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 40vh;">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter une photo/vidéo</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <form id="FormUploadPicture" enctype="multipart/form-data" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        @Html.LabelFor(z => z.CategorieListItem, new { @class = "col-form-label" })
+                        @Html.DropDownListFor(m => m.SelectedCategory, Model.CategorieListItem, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(z => z.PictureToUpload, new { @class = "col-form-label" })
+                        @Html.TextBoxFor(model => model.PictureToUpload, new { type = "file", @multiple = "multiple", accept = ".png,.jpg,.jpeg,.gif", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PictureToUpload)
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" onclick="UploadPictureButton();" class="btn btn-primary">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -29,110 +39,81 @@
 <section id="gallery" class="bg-gray-1">
     <div class="container">
         <div class="row">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                Launch demo modal
-            </button>
-        </div>
-        <div class="row">
             <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
                 <div class="title-block">
-                    <h1>@WeddingCD.Resources.View.CommonResources.Photo <span><em>@WeddingCD.Resources.View.CommonResources.Galerie</em></span></h1>
+                    <h1>@WeddingCD.Resources.View.CommonResources.Galerie <span><em>@WeddingCD.Resources.View.CommonResources.Photo </em></span></h1>
+
                     <div class="divider"></div>
-                    <p><em>Dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu faucibus. Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis auctor in est ac dignissim.</em></p>
+
+                    <div class="row">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Ajouter une photo
+                        </button>
+                    </div>
+
+                    <div class="divider"></div>
+
+
                     <div class="gallery_nav">
                         <button class="btn btn-primary btn-bordered filter-button active" data-filter="all">@WeddingCD.Resources.View.CommonResources.Tous</button>
 
                         @foreach (var category in Model.Categories)
                         {
-                            <button class="btn btn-primary btn-bordered filter-button" data-filter="all">@Html.Raw(category.Name)</button>
+                            <button class="btn btn-primary btn-bordered filter-button" data-filter="gallery-@Html.Raw(category.Name)">@Html.Raw(category.Name)</button>
                         }
-
-                        @*<button class="btn btn-primary btn-bordered filter-button active" data-filter="all">All</button>
-                            <button class="btn btn-primary btn-bordered filter-button" data-filter="gallery-family">Family</button>
-                            <button class="btn btn-primary btn-bordered filter-button" data-filter="gallery-friends">Friends</button>
-                            <button class="btn btn-primary btn-bordered filter-button" data-filter="gallery-trips">Trips</button>
-                            <button class="btn btn-primary btn-bordered filter-button" data-filter="gallery-portraits">Portraits</button>
-                            <button class="btn btn-primary btn-bordered filter-button" data-filter="gallery-portraits1">Portraits</button>*@
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="row gallery-popup">
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-family">
-                <a href="img/gallery/gallery-image-01.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-01.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-friends">
-                <a href="img/gallery/gallery-image-02.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-02.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-family">
-                <a href="img/gallery/gallery-image-03.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-03.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-portraits">
-                <a href="img/gallery/gallery-image-04.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-04.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-trips">
-                <a href="img/gallery/gallery-image-05.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-05.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-portraits">
-                <a href="img/gallery/gallery-image-06.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-06.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-trips">
-                <a href="img/gallery/gallery-image-07.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-07.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-portraits">
-                <a href="img/gallery/gallery-image-08.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-08.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-portraits">
-                <a href="img/gallery/gallery-image-09.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-09.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-portraits1">
-                <a href="img/gallery/gallery-image-09.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-09.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-portraits1">
-                <a href="img/gallery/gallery-image-09.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-09.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-portraits1">
-                <a href="img/gallery/gallery-image-09.jpg" class="mfp-image" title="Gallery image title">
-                    <img src="img/gallery/gallery-image-09.jpg" class="img-responsive" alt="Gallery image">
-                </a>
-            </div>
+            @foreach (var picture in Model.Pictures)
+            {
+                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gallery-@Html.Raw(picture.Category.Name)">
+                    <a href="/Content/Galerie/@Html.Raw(picture.Path)" class="mfp-image" title="Gallery image title">
+                        <img src="/Content/Galerie/@Html.Raw(picture.Path)" class="img-responsive" alt="Gallery image" style="height:250px;">
+                    </a>
+                </div>
+            }
         </div>
     </div>
 </section>
 <!-- END SECTION: gallery -->
+
+<script>
+    jQuery(document).ready(function () {
+    });
+
+    function UploadPictureButton() {
+        $("#FormUploadPicture").submit();
+    }
+
+    jQuery('#FormUploadPicture').submit(function (e) {
+        e.preventDefault();
+
+        var category = $("#SelectedCategory").val();
+
+        var formData = new FormData();
+        formData.append('Categorie', category);
+
+        var ins = document.getElementById('PictureToUpload').files.length;
+        for (var x = 0; x < ins; x++) {
+            formData.append("files", document.getElementById('PictureToUpload').files[x]);
+        }
+
+        jQuery.ajax({
+            url: '@Url.Action("UploadPictureAsync", "Home")',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function () {
+                location.reload();
+            },
+            error: function (xhr, request, error) {
+                console.log(arguments);
+                alert(xhr.responseText);
+            },
+        });
+    });
+</script>

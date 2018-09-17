@@ -14,7 +14,7 @@ namespace WeddingCD.DAL.Entities
         public long IdCategory { get; set; }
         public string Path { get; set; }
         public string AddBy { get; set; }
-        //public DateTime Date { get; set; }
+        public DateTime Date { get; set; }
 
         public virtual Category Category { get; set; }
     }
