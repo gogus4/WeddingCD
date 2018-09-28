@@ -87,7 +87,7 @@ namespace WeddingCD.Business
             {
                 this.DbContext.Pictures.Add(new Picture()
                 {
-                    AddBy = pictureToInsert.AddBy,
+                    Person = pictureToInsert.Person,
                     Category = pictureToInsert.Category,
                     Path = pictureToInsert.Path,
                     Date = DateTime.UtcNow
@@ -101,6 +101,23 @@ namespace WeddingCD.Business
             }
 
             return null;
+        }
+
+
+        /// <summary>
+        /// Get all person
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        public async Task<IList<Person>> GetPeopleAsync()
+        {
+            try
+            {
+                return await this.DbContext.Persons.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         #endregion

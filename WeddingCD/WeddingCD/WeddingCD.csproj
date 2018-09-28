@@ -167,6 +167,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Home\HomeViewModel.cs" />
+    <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +182,9 @@
     <Content Include="Content\Images\bg-home.jpg" />
     <Content Include="Content\Images\bg-5.jpg" />
     <Content Include="Content\Images\bg-1_old.jpg" />
+    <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\croix_noir.png" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\pic-bride.jpg" />
     <Content Include="Content\Images\pic-groom.jpg" />
     <Content Include="Content\Images\story-img-01.jpg" />
@@ -189,11 +193,13 @@
     <Content Include="Content\libs\owl-carousel\owl.carousel.css" />
     <Content Include="Content\libs\owl-carousel\owl.theme.css" />
     <Content Include="Content\libs\TimeCircles-countdown\TimeCircles.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="Content\theme-style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\libs\bootstrap-validator\validator.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -247,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Authentication\" />
     <Folder Include="Content\Galerie\" />
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +270,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WeddingCD.Common\WeddingCD.Common.csproj">
+      <Project>{025B7C42-C42F-4078-9A23-079749975634}</Project>
+      <Name>WeddingCD.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeddingCD.DAL.Entities\WeddingCD.DAL.Entities.csproj">
       <Project>{871719b7-9eac-49e2-9db4-fee1898b1f8f}</Project>
       <Name>WeddingCD.DAL.Entities</Name>

@@ -71,6 +71,10 @@
       <Project>{96BA118B-6F60-43D9-8056-A7EFE01AC7D7}</Project>
       <Name>WeddingCD.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WeddingCD.Common\WeddingCD.Common.csproj">
+      <Project>{025B7C42-C42F-4078-9A23-079749975634}</Project>
+      <Name>WeddingCD.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeddingCD.Configuration\WeddingCD.Configuration.csproj">
       <Project>{2432BC71-0C66-446F-9BD5-D7CA990624D5}</Project>
       <Name>WeddingCD.Configuration</Name>
@@ -82,6 +86,10 @@
     <ProjectReference Include="..\WeddingCD.Interface\WeddingCD.Interface.csproj">
       <Project>{72B82BA7-8135-424F-BC7C-0AE995CEE77F}</Project>
       <Name>WeddingCD.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeddingCD.Web.Common\WeddingCD.Web.Common.csproj">
+      <Project>{358BFC21-219E-4BC1-BA7E-4ED412B855A4}</Project>
+      <Name>WeddingCD.Web.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

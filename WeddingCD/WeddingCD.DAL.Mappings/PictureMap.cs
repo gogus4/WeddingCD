@@ -16,13 +16,15 @@ namespace WeddingCD.DAL.Mappings
             this.Property(t => t.IdPicture).HasColumnName("IdPicture");
             this.Property(t => t.IdCategory).HasColumnName("IdCategory");
             this.Property(t => t.Path).HasColumnName("Path");
-            //this.Property(t => t.Date).HasColumnName("Date");
-            this.Property(t => t.AddBy).HasColumnName("AddBy");
 
             // Relationships
             this.HasRequired(t => t.Category)
                 .WithMany(t => t.Pictures)
                 .HasForeignKey(d => d.IdCategory);
+
+            this.HasRequired(t => t.Person)
+                .WithMany(t => t.Pictures)
+                .HasForeignKey(d => d.IdPerson);
         }
     }
 }

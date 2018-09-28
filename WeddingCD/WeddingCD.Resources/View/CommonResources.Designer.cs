@@ -79,6 +79,15 @@ namespace WeddingCD.Resources.View {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ajouter une photo / vidéo.
+        /// </summary>
+        public static string AjouterPhotoVideo {
+            get {
+                return ResourceManager.GetString("AjouterPhotoVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Couple.
         /// </summary>
         public static string Couple {
@@ -169,7 +178,7 @@ namespace WeddingCD.Resources.View {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Photo.
+        ///   Recherche une chaîne localisée semblable à Photo / Vidéo.
         /// </summary>
         public static string Photo {
             get {
@@ -192,6 +201,15 @@ namespace WeddingCD.Resources.View {
         public static string PrenomHomme {
             get {
                 return ResourceManager.GetString("PrenomHomme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ajouté par :.
+        /// </summary>
+        public static string Propriete_AddBy {
+            get {
+                return ResourceManager.GetString("Propriete_AddBy", resourceCulture);
             }
         }
         
@@ -228,6 +246,15 @@ namespace WeddingCD.Resources.View {
         public static string Tous {
             get {
                 return ResourceManager.GetString("Tous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le champ &quot;Ajouté par&quot; est obligatoire..
+        /// </summary>
+        public static string Validation_AddBy_Required {
+            get {
+                return ResourceManager.GetString("Validation_AddBy_Required", resourceCulture);
             }
         }
         

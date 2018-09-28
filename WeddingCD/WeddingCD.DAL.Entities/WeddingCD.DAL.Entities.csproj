@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Person.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Picture.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

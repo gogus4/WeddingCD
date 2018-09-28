@@ -15,7 +15,17 @@ namespace WeddingCD.Models.Home
             this.Categories = new List<Category>();
             this.Pictures = new List<Picture>();
             this.CategorieListItem = new List<SelectListItem>();
+            this.People = new List<Person>();
+            this.AddByListItem = new List<SelectListItem>();
         }
+
+        /// <summary>
+        /// Gets or sets the people
+        /// </summary>
+        /// <value>
+        /// The people
+        /// </value>
+        public IList<Person> People { get; set; }
 
         /// <summary>
         /// Gets or sets the categories
@@ -54,6 +64,18 @@ namespace WeddingCD.Models.Home
         [Display(Name = "Propriete_Category", ResourceType = typeof(WeddingCD.Resources.View.CommonResources))]
         [Required(ErrorMessageResourceName = "Validation_Category_Required", ErrorMessageResourceType = typeof(WeddingCD.Resources.View.CommonResources))]
         public List<SelectListItem> CategorieListItem { get; set; }
+
+        /// <summary>
+        /// Gets or sets the selected person who add the picture.
+        /// </summary>
+        public string SelectedAddBy { get; set; }
+
+        /// <summary>
+        /// Gets or sets the person who add the picture.
+        /// </summary>
+        [Display(Name = "Propriete_AddBy", ResourceType = typeof(WeddingCD.Resources.View.CommonResources))]
+        [Required(ErrorMessageResourceName = "Validation_AddBy_Required", ErrorMessageResourceType = typeof(WeddingCD.Resources.View.CommonResources))]
+        public List<SelectListItem> AddByListItem { get; set; }
 
     }
 }

@@ -123,6 +123,9 @@
   <data name="AdresseQuinta" xml:space="preserve">
     <value>Rua do Redolho 4620-503 Pias (Lousada)</value>
   </data>
+  <data name="AjouterPhotoVideo" xml:space="preserve">
+    <value>Ajouter une photo / vidéo</value>
+  </data>
   <data name="Couple" xml:space="preserve">
     <value>Couple</value>
   </data>
@@ -154,13 +157,16 @@
     <value>Notre histoire</value>
   </data>
   <data name="Photo" xml:space="preserve">
-    <value>Photo</value>
+    <value>Photo / Vidéo</value>
   </data>
   <data name="PrenomFemme" xml:space="preserve">
     <value>Cécile</value>
   </data>
   <data name="PrenomHomme" xml:space="preserve">
     <value>Diégo</value>
+  </data>
+  <data name="Propriete_AddBy" xml:space="preserve">
+    <value>Ajouté par :</value>
   </data>
   <data name="Propriete_Category" xml:space="preserve">
     <value>Catégorie</value>
@@ -173,6 +179,9 @@
   </data>
   <data name="Tous" xml:space="preserve">
     <value>Tous</value>
+  </data>
+  <data name="Validation_AddBy_Required" xml:space="preserve">
+    <value>Le champ "Ajouté par" est obligatoire.</value>
   </data>
   <data name="Validation_Category_Required" xml:space="preserve">
     <value>Le champ "Catégorie" est obligatoire.</value>

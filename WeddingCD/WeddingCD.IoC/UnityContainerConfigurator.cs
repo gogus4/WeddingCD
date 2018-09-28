@@ -1,8 +1,10 @@
 ﻿using Microsoft.Practices.Unity;
 using WeddingCD.Business;
 using WeddingCD.Business.Interface;
+using WeddingCD.Common.Security;
 using WeddingCD.Configuration;
 using WeddingCD.DAL.Context;
+using WeddingCD.Web.Common.Authentication;
 
 namespace WeddingCD.IoC
 {
@@ -23,12 +25,14 @@ namespace WeddingCD.IoC
             container.RegisterType<WeddingCDDbContext, WeddingCDDbContext>(dbContextLifetimeManager);
 
             container.RegisterType<IGalleryManagement, GalleryManagement>();
+            container.RegisterType<IUserManagement, UserManagement>();
+
             //// Logging
             //container.RegisterType<ILogFactory, LogFactory>();
             //container.RegisterType<ILogReader, AzureDbLogReader>();
 
             //// Web
-            //container.RegisterType<IAuth, FormsAuthWrapper>();
+            container.RegisterType<IAuth, FormsAuthWrapper>();
             //container.RegisterType<IWebService, WebServiceImplementation>();
             //container.RegisterType<ISigfoxQualityService, SigfoxQualityService>();
 

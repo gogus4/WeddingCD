@@ -9,10 +9,9 @@ namespace WeddingCD
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        //"~/Scripts/jquery-{version}.js",
                         "~/Scripts/theme-main.js",
                         "~/Scripts/jquery.sticky.js"
-                        , "~/Scripts/jquery.nav.js"));
+                        ,"~/Scripts/jquery.nav.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -43,7 +42,8 @@ namespace WeddingCD
                       "~/Content/libs/owl-carousel/owl.carousel.css",
                       "~/Content/libs/owl-carousel/owl.theme.css",
                       "~/Content/libs/TimeCircles-countdown/TimeCircles.css",
-                      "~/Content/colors/pink.css"));
+                      "~/Content/colors/pink.css",
+                      "~/Content/styles.css"));
         }
     }
 }

@@ -286,6 +286,10 @@ td, th {
     -moz-osx-font-smoothing: grayscale
 }
 
+.glyphicon-lock::before {
+    content: "\e033";
+}
+
 .glyphicon-asterisk:before {
     content: "\2a"
 }

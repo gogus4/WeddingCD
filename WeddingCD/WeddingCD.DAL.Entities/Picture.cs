@@ -12,10 +12,11 @@ namespace WeddingCD.DAL.Entities
 
         public long IdPicture { get; set; }
         public long IdCategory { get; set; }
+        public long IdPerson { get; set; }
         public string Path { get; set; }
-        public string AddBy { get; set; }
         public DateTime Date { get; set; }
 
         public virtual Category Category { get; set; }
+        public virtual Person Person { get; set; }
     }
 }

@@ -36,5 +36,11 @@ namespace WeddingCD.Business.Interface
         /// </summary>
         /// <returns>The Task to be awaited.</returns>
         Task<IList<Picture>> InsertPictureAsync(Picture pictureToInsert);
+
+        /// <summary>
+        /// Get all person
+        /// </summary>
+        /// <returns>The Task to be awaited.</returns>
+        Task<IList<Person>> GetPeopleAsync();
     }
 }

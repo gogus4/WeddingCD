@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserMap.cs" />
+    <Compile Include="PersonMap.cs" />
     <Compile Include="PictureMap.cs" />
     <Compile Include="CategoryMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

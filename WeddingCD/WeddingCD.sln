@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.Interface", "Wedd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.Configuration", "WeddingCD.Configuration\WeddingCD.Configuration.csproj", "{2432BC71-0C66-446F-9BD5-D7CA990624D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingCD.Web.Common", "WeddingCD.Web.Common\WeddingCD.Web.Common.csproj", "{358BFC21-219E-4BC1-BA7E-4ED412B855A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{2432BC71-0C66-446F-9BD5-D7CA990624D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2432BC71-0C66-446F-9BD5-D7CA990624D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2432BC71-0C66-446F-9BD5-D7CA990624D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358BFC21-219E-4BC1-BA7E-4ED412B855A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358BFC21-219E-4BC1-BA7E-4ED412B855A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358BFC21-219E-4BC1-BA7E-4ED412B855A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358BFC21-219E-4BC1-BA7E-4ED412B855A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 		{96BA118B-6F60-43D9-8056-A7EFE01AC7D7} = {08AA3242-1018-43D9-B886-A84993F02F56}
 		{72B82BA7-8135-424F-BC7C-0AE995CEE77F} = {08AA3242-1018-43D9-B886-A84993F02F56}
 		{2432BC71-0C66-446F-9BD5-D7CA990624D5} = {346DB3CA-CC50-453E-A9BB-EBB86FF263E2}
+		{358BFC21-219E-4BC1-BA7E-4ED412B855A4} = {8D8D0D87-5C69-43F6-8BAC-6176F535A236}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39C57351-D67A-42CA-B721-B7EDE05CD2D7}

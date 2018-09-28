@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PasswordHash.cs" />
+    <Compile Include="UserManagement.cs" />
     <Compile Include="GalleryManagement.cs" />
     <Compile Include="BaseManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
